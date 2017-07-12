@@ -51,6 +51,7 @@ namespace WingtipToys
 
           // Get last error from the server
           Exception exc = Server.GetLastError();
+          Console.WriteLine("Unhandled exception: " + exc.Message + exc.StackTrace);
 
           if (exc is HttpUnhandledException)
           {
