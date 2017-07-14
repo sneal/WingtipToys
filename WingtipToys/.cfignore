@@ -1,8 +1,12 @@
-# Ignore files list for `cf push`
+# ASP.NET ignore files list for `cf push`
+#
+# Drop this file into the website project directory you're pushing next to the web.config
+# This file will produce almost identical results to pushing from the publish directory
 
 # Visual Studio project files
 *.sln
 *.csproj
+*.user
 .vs/
 
 # Source files
@@ -10,9 +14,12 @@
 Web.Debug.config
 Web.Release.config
 README.md
+Project_Readme.html
 
 # Visual Studio intermediate output files
 obj/
+PublishProfiles/
+bin/*.xml
 
 # Git
 .git/
@@ -59,15 +66,17 @@ _ReSharper*/
 # but keep track of directories ending in .cache
 !*.[Cc]ache/
 
-# Backup & report files from converting an old project file
-# to a newer Visual Studio version. Backup files are not needed,
-# because we have git ;-)
+# Visual Studio intellisense files
+*.intellisense.js
+
+# Backup & report files from converting an VS old project file to a newer version
 _UpgradeReport_Files/
 Backup*/
 UpgradeLog*.XML
 UpgradeLog*.htm
 
-# SQL Server files
-#*.mdf
-#*.ldf
-#*.ndf
+# Log files
+*.log
+
+# OS X
+.DS_Store
